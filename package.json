@@ -4,7 +4,7 @@
   "main": "Gruntfile.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/nfrasser/ember-bootstrap-modal-route.git",
+    "url": "https://github.com/nfrasser/ember-bootstrap-modal-route.git"
   },
   "description": "A quick route whose templete is rendered into a Bootstrap modal",
   "author": "nfrasser",

@@ -1,6 +1,7 @@
 #
 node_modules
 bower_components
+npm-debug.log
 
 .DS_Store
 .AppleDouble
@@ -23,3 +24,6 @@ Desktop.ini
 
 # Recycle Bin used on file shares
 $RECYCLE.BIN/
+
+# SublimeText project files
+*.sublime-workspace
