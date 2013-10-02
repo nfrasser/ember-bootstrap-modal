@@ -9,7 +9,8 @@
 */
 Ember.BSModalRouteMixin = Ember.Mixin.create({
 
-	modalTemplateName: 'bs-modal',
+	modalTemplateName: 'bs-modal-view',
+	templateName: '',
 
 	/**
 		Loads the provided modal templates into their outlets.
@@ -31,41 +32,42 @@ Ember.BSModalRouteMixin = Ember.Mixin.create({
 		@method	renderTemplate
 		@protected
 	*/
-	renderTemplate: function() {
+	renderTemplate: function () {
 
-		var controller = this.controllerFor(this.get('controllerName')),
+		var controller = this.get('controller'),
 
 			modalTemplateName	= this.get('modalTemplateName'),
 			contentTemplateName	= this.get('templateName');
 
 		// Requires a modal template
-		this.assert(
+		Em.assert(
 			'Requires a "modalTemplateName" property to determine the template to use for the modal',
 			!Ember.isEmpty(modalTemplateName)
 		);
 
 		// The modal requires a controller
-		this.assert(
+		Em.assert(
 			'Requires a "controllerName" property to determine the controller of the modal template',
 			!Ember.isEmpty(controller)
 		);
 
 		// Render the template for the modal
-		this.render(modalTemplateName, {
+		this.render('bs-modal-view', {
 			into: 'application',
-			outlet: 'modal',
+			outlet: 'bs-modal',
 			controller: controller
 		});
-
+/*
 		// Fill the modal up with content
 		this.render(contentTemplateName, {
 			into: modalTemplateName,
 			controller: controller
 		});
+*/
 	},
 
 	// Clear the template from a specific outlet
-	clearOutlet: function(container, outlet) {
+	_clearOutlet: function (container, outlet) {
 		var parentView = this.router._lookupActiveView(container);
 		parentView.disconnectOutlet(outlet);
 	},
@@ -75,8 +77,8 @@ Ember.BSModalRouteMixin = Ember.Mixin.create({
 
 		@method	deactivate
 	*/
-	deactivate: function() {
+	deactivate: function () {
 		this._super();
-		this.clearOutlet('application', 'modal');
+		this._clearOutlet('application', 'modal');
 	}
 });
