@@ -10,7 +10,10 @@
 Ember.BSModalRouteMixin = Ember.Mixin.create({
 
 	modalTemplateName: 'bs-modal-view',
-	templateName: '',
+
+	bodyTemplateName: '',
+	headerTemplateName: '',
+	footerTemplateName: '',
 
 	/**
 		Loads the provided modal templates into their outlets.
@@ -37,33 +40,28 @@ Ember.BSModalRouteMixin = Ember.Mixin.create({
 		var controller = this.get('controller'),
 
 			modalTemplateName	= this.get('modalTemplateName'),
-			contentTemplateName	= this.get('templateName');
+			bodyTemplateName	= this.get('bodyTemplateName');
 
 		// Requires a modal template
 		Em.assert(
-			'Requires a "modalTemplateName" property to determine the template to use for the modal',
-			!Ember.isEmpty(modalTemplateName)
-		);
-
-		// The modal requires a controller
-		Em.assert(
-			'Requires a "controllerName" property to determine the controller of the modal template',
-			!Ember.isEmpty(controller)
+			'Requires a "bodyTemplateName" property to determine the template to use for the modal',
+			!Ember.isEmpty(bodyTemplateName)
 		);
 
 		// Render the template for the modal
-		this.render('bs-modal-view', {
+		this.render(modalTemplateName, {
 			into: 'application',
 			outlet: 'bs-modal',
 			controller: controller
 		});
-/*
+
 		// Fill the modal up with content
-		this.render(contentTemplateName, {
+		this.render(bodyTemplateName, {
 			into: modalTemplateName,
+			outlet: 'modal-body',
 			controller: controller
 		});
-*/
+
 	},
 
 	// Clear the template from a specific outlet

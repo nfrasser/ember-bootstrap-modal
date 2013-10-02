@@ -5,7 +5,9 @@ window.App = Ember.Application.create({
 });
 
 App.InfoRoute = Ember.Route.extend(Ember.BSModalRouteMixin, {
-	templateName: 'info'
+	bodyTemplateName: 'info',
+	headerTemplateName: 'info-header',
+	footerTemplateName: 'info-footer'
 });
 
 App.Router.map (function () {

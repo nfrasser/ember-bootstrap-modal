@@ -1,10 +1,9 @@
 /**
 	View used for rendering the modal
 */
-Ember.BSModalView = Ember.View.extend({
+Ember.BSModalRouteView = Ember.View.extend({
 
 	classNames: ['modal', 'fade'],
-	templateName: 'bs-modal',
 	tagName: 'div',
 
 	/**
@@ -29,10 +28,9 @@ Ember.BSModalView = Ember.View.extend({
 		var controller = this.get('controller');
 
 		this.set('_isShown', false);
-		return Em.isNone(controller) ?  null : controller.back();
-
-		//var controller = this.get('controller');
-		//return Ember.isNone(controller) ?  null :  controller.back();
+		return Em.isNone(controller) ||
+			Em.typeOf(Ember.get(controller, 'back') !== 'function') ?
+			history.back() : controller.back();
 	},
 
 	activate: function () {
@@ -112,4 +110,8 @@ Ember.BSModalView = Ember.View.extend({
 
 		this.$().off('hidden.bs.modal');
 	}
+});
+
+Ember.BSModalView = Ember.BSModalRouteView.extend({
+	templateName: '_bs-modal'
 });
