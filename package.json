@@ -1,0 +1,28 @@
+{
+  "name": "soapbox",
+  "version": "3.10.1",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "grunt"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/HitSend/soapbox.git",
+    "private": true
+  },
+  "description": "Front-end for SoapBox v4",
+  "author": "HitSend Inc.",
+  "license": "",
+  "devDependencies": {
+    "grunt": "~0.4.0",
+    "grunt-contrib-uglify": "~0.1.1rc5",
+    "grunt-contrib-jshint": "~0.1.1rc5",
+    "grunt-contrib-qunit": "~0.2.2",
+    "grunt-contrib-watch": "~0.2.0rc5",
+    "grunt-contrib-cssmin": "~0.6.1",
+    "grunt-contrib-csslint": "~0.1.2",
+    "grunt-neuter": "~0.5.0",
+    "grunt-ember-templates": "~0.4.6",
+    "bower": "~1.2.7"
+  }
+}
