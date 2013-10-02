@@ -1,12 +1,12 @@
 {
-  "name": "ember-bootstrap-modal-route",
+  "name": "ember-bootstrap-modal",
   "version": "1.0.0",
   "main": "Gruntfile.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/nfrasser/ember-bootstrap-modal-route.git"
+    "url": "https://github.com/nfrasser/ember-bootstrap-modal.git"
   },
-  "description": "A quick route whose templete is rendered into a Bootstrap modal",
+  "description": "A utility plugin for Ember.js which allows using Bootstrap modals as routes and views in your Ember application.",
   "author": "nfrasser",
   "license": "BSD-2-Clause",
   "devDependencies": {
@@ -31,6 +31,7 @@
     "twitter",
     "bootstrap",
     "route",
+    "view",
     "modal"
   ]
 }

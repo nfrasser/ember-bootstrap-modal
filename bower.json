@@ -1,6 +1,6 @@
 {
-  "name": "responses",
-  "version": "4.0.1",
+  "name": "ember-boostrap-modal",
+  "version": "1.0.0",
   "dependencies": {
     "bootstrap": "~3.0.0",
     "ember-starter-kit": "~1.0.0",
