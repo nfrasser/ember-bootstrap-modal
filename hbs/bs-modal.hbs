@@ -1,0 +1,26 @@
+{{!-- Modal --}}
+{{!
+	When called from a BSModalRoute, will be automatically placed inside
+	an BSModalView
+}}
+<div class="modal-dialog">
+	<div class="modal-content">
+		{{#if hasHeader}}
+			<div class="modal-header">
+				{{view view.close}}
+				{{outlet "modal-header"}}
+			</div>
+		{{/if}}
+
+		<div class="modal-body">
+			{{#unless hasHeader}}{{view view.close}}{{/unless}}
+			{{outlet}}
+		</div>
+
+		{{#if hasFooter}}
+			<div class="modal-footer">
+				{{outlet "modal-footer"}}
+			</div>
+		{{/if}}
+	</div>{{!-- /.modal-content --}}
+</div>{{!-- /.modal-dialog --}}
