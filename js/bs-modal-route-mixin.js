@@ -40,13 +40,23 @@ Ember.BSModalRouteMixin = Ember.Mixin.create({
 		var controller = this.get('controller'),
 
 			modalTemplateName	= this.get('modalTemplateName'),
-			bodyTemplateName	= this.get('bodyTemplateName');
+
+			bodyTemplateName	= this.get('bodyTemplateName'),
+			headerTemplateName	= this.get('headerTemplateName'),
+			footerTemplateName	= this.get('footerTemplateName'),
+
+			hasHeader = !Em.isEmpty(headerTemplateName),
+			hasFooter = !Em.isEmpty(footerTemplateName);
 
 		// Requires a modal template
 		Em.assert(
 			'Requires a "bodyTemplateName" property to determine the template to use for the modal',
 			!Ember.isEmpty(bodyTemplateName)
 		);
+
+		// Figure out if we need headers/footers
+		controller.set('hasBSModalHeader', hasHeader);
+		controller.set('hasBSModalFooter', hasFooter);
 
 		// Render the template for the modal
 		this.render(modalTemplateName, {
@@ -61,6 +71,22 @@ Ember.BSModalRouteMixin = Ember.Mixin.create({
 			outlet: 'modal-body',
 			controller: controller
 		});
+
+		if (hasHeader) {
+			this.render(headerTemplateName, {
+				into: modalTemplateName,
+				outlet: 'modal-header',
+				controller: controller
+			});
+		}
+
+		if (hasFooter) {
+			this.render(footerTemplateName, {
+				into: modalTemplateName,
+				outlet: 'modal-footer',
+				controller: controller
+			});
+		}
 
 	},
 

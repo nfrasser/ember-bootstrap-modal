@@ -5,7 +5,7 @@
 }}
 <div class="modal-dialog">
 	<div class="modal-content">
-		{{#if hasHeader}}
+		{{#if controller.hasBSModalHeader}}
 			<div class="modal-header">
 				{{view view.close}}
 				{{outlet "modal-header"}}
@@ -13,11 +13,11 @@
 		{{/if}}
 
 		<div class="modal-body">
-			{{#unless hasHeader}}{{view view.close}}{{/unless}}
+			{{#unless controller.hasBSModalHeader}}{{view view.close}}{{/unless}}
 			{{outlet "modal-body"}}
 		</div>
 
-		{{#if hasFooter}}
+		{{#if controller.hasBSModalFooter}}
 			<div class="modal-footer">
 				{{outlet "modal-footer"}}
 			</div>

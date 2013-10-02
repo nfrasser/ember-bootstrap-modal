@@ -1,4 +1,6 @@
 {{! Modal View Template}}
 {{#view Ember.BSModalRouteView}}
-	{{partial "bs-modal"}}
+	{{#with this}}
+		{{partial "bs-modal"}}
+	{{/with}}
 {{/view}}

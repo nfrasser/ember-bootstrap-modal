@@ -112,6 +112,9 @@ Ember.BSModalRouteView = Ember.View.extend({
 	}
 });
 
+/**
+	The regular modal view is a general purpose modal
+*/
 Ember.BSModalView = Ember.BSModalRouteView.extend({
 	templateName: '_bs-modal'
 });
