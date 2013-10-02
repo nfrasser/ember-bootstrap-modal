@@ -1,28 +1,36 @@
 {
-  "name": "soapbox",
-  "version": "3.10.1",
+  "name": "ember-bootstrap-modal-route",
+  "version": "1.0.0",
   "main": "Gruntfile.js",
-  "scripts": {
-    "test": "grunt"
-  },
   "repository": {
     "type": "git",
-    "url": "https://github.com/HitSend/soapbox.git",
-    "private": true
+    "url": "https://github.com/nfrasser/ember-bootstrap-modal-route.git",
   },
-  "description": "Front-end for SoapBox v4",
-  "author": "HitSend Inc.",
-  "license": "",
+  "description": "A quick route whose templete is rendered into a Bootstrap modal",
+  "author": "nfrasser",
+  "license": "BSD-2-Clause",
   "devDependencies": {
     "grunt": "~0.4.0",
     "grunt-contrib-uglify": "~0.1.1rc5",
-    "grunt-contrib-jshint": "~0.1.1rc5",
-    "grunt-contrib-qunit": "~0.2.2",
     "grunt-contrib-watch": "~0.2.0rc5",
-    "grunt-contrib-cssmin": "~0.6.1",
-    "grunt-contrib-csslint": "~0.1.2",
     "grunt-neuter": "~0.5.0",
     "grunt-ember-templates": "~0.4.6",
     "bower": "~1.2.7"
-  }
+  },
+  "dependencies": {
+    "bower": "~1.2.7",
+    "grunt": "~0.4.1",
+    "grunt-contrib-uglify": "~0.1.2",
+    "grunt-contrib-watch": "~0.2.0",
+    "grunt-ember-templates": "~0.4.15",
+    "grunt-neuter": "~0.5.0"
+  },
+  "keywords": [
+    "ember",
+    "js",
+    "twitter",
+    "bootstrap",
+    "route",
+    "modal"
+  ]
 }

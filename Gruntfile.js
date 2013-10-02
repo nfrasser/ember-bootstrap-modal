@@ -81,10 +81,6 @@ module.exports = function (grunt) {
 				templateName: function (sourceFile) {
 
 					// Example fileName => templateName
-					// js/core/templates/selector				=> selector
-					// js/soapbox/templates/ideas				=> ideas
-					// js/apps/sprints/templates/custom_ideas	=> custom_ideas
-
 					var name = sourceFile.replace(/^hbs\//, '');
 
 					// "partials/" -> '_'
@@ -94,12 +90,6 @@ module.exports = function (grunt) {
 				}
 			},
 
-			// Add app-specific templates here
-			//	appName: {
-			//		files: {
-			//			'build/appName-templates.js': 'js/apps/appName/templates/**/*.hbs
-			//		}
-			//	}
 			app: {
 				files: {
 					'build/js/templates.js': "hbs/**/*.hbs"
@@ -119,21 +109,11 @@ module.exports = function (grunt) {
 		*/
 		watch: {
 
-			// App-Specific templates
-			//	appNameTemplates: {
-			//		files: ['js/apps/appName/templates/**/*.hbs],
-			//		tasks: ['emberTemplates:appName']
-			//	}
 			templates: {
 				files: ['hbs/**/*.hbs'],
 				tasks: ['emberTemplates']
 			},
 
-			// Apps
-			//	appName: {
-			//		files: ['js/apps/appName/**/*.js],
-			//		tasks: ['neuter:appName']
-			//	}
 			app: {
 				files: ['js/**/*.js'],
 				tasks: ['neuter']
@@ -156,8 +136,6 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks('grunt-neuter');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-ember-templates');
-	//grunt.loadNpmTasks('grunt-closure-compiler');
-
 
 	// Build and default tasks. Builds production requirements into the dist folder
 	grunt.registerTask('build', ['emberTemplates', 'neuter', 'uglify');
