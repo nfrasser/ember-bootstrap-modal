@@ -9,7 +9,7 @@
 */
 Ember.BSModalRouteMixin = Ember.Mixin.create({
 
-	modalTemplateName: 'bs-modal'
+	modalTemplateName: 'bs-modal',
 
 	/**
 		Loads the provided modal templates into their outlets.
