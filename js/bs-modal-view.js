@@ -1,3 +1,6 @@
+/**
+	View used for rendering the modal
+*/
 Ember.BSModalView = Ember.View.extend({
 
 	classNames: ['modal', 'fade'],

@@ -1,5 +1,5 @@
 {
-  "name": "ember-boostrap-modal",
+  "name": "ember-bootstrap-modal",
   "version": "1.0.0",
   "dependencies": {
     "bootstrap": "~3.0.0",
