@@ -31,7 +31,7 @@ module.exports = function (grunt) {
 			// Add new apps here as required
 			app: {
 				files: {
-					'build/js/modal-route.js': 'js/modal-route.js'
+					'build/ember-bs-modal.js': 'js/ember-bs-modal.js'
 				}
 			}
 
@@ -52,9 +52,9 @@ module.exports = function (grunt) {
 			// Dependencies, SoapBox, and Core.
 			main: {
 				files: {
-					'dist/js/modal-route.min.js': [
-						'build/js/templates.js',
-						'build/js/modal-route.js',
+					'dist/ember-bs-modal.min.js': [
+						'build/templates.js',
+						'build/ember-bs-modal.js',
 					]
 				}
 			}
@@ -92,7 +92,7 @@ module.exports = function (grunt) {
 
 			app: {
 				files: {
-					'build/js/templates.js': "hbs/**/*.hbs"
+					'build/templates.js': "hbs/**/*.hbs"
 				}
 			}
 		},
@@ -119,17 +119,8 @@ module.exports = function (grunt) {
 				tasks: ['neuter']
 			}
 
-		},
-
-		/*
-			Find all the <whatever>_test.js files in the test folder.
-			These will get loaded via script tags when the task is run.
-			This gets run as part of the larger 'test' task registered
-			below.
-		*/
-		build_test_runner_file: {
-			all: ['test/**/*-test.js']
 		}
+
 	});
 
 	grunt.loadNpmTasks('grunt-contrib-uglify');
@@ -138,7 +129,7 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks('grunt-ember-templates');
 
 	// Build and default tasks. Builds production requirements into the dist folder
-	grunt.registerTask('build', ['emberTemplates', 'neuter', 'uglify');
+	grunt.registerTask('build', ['emberTemplates', 'neuter', 'uglify']);
 
 	/*
 		Watch task. Compiles templates/css, neuters application code, and begins
