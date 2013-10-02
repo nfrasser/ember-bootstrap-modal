@@ -1,17 +1,31 @@
 {
   "name": "ember-bootstrap-modal",
   "version": "1.0.0",
-  "dependencies": {
-    "bootstrap": "~3.0.0",
-    "ember-starter-kit": "~1.0.0",
-    "jquery": "~1.10.2"
-  },
+  "homepage": "https://github.com/nfrasser/ember-bootstrap-modal",
+  "authors": [
+    "Nick Frasser <nick@hitsend.ca>"
+  ],
+  "description": "A utility plugin for Ember.js that allows routes and views to be shown as Bootstrap modals.",
+  "main": "README.md",
+  "keywords": [
+    "ember",
+    "js",
+    "twitter",
+    "bootstrap",
+    "modal"
+  ],
+  "license": "MIT",
+  "private": true,
   "ignore": [
     "**/.*",
     "node_modules",
-    "components",
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "dependencies": {
+    "bootstrap": "~3.0.0",
+    "ember-starter-kit": "~1.0.0",
+    "jquery": "1.10.2"
+  }
 }
