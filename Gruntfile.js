@@ -29,11 +29,21 @@ module.exports = function (grunt) {
 
 			// Neutered Apps
 			// Add new apps here as required
-			app: {
+			build: {
 				files: {
 					'build/ember-bs-modal.js': 'js/ember-bs-modal.js'
 				}
+			},
+			dist: {
+				files: {
+					'dist/ember-bs-modal.js': [
+						'build/templates.js',
+						'build/ember-bs-modal.js'
+					]
+
+				}
 			}
+
 
 		},
 
@@ -135,5 +145,5 @@ module.exports = function (grunt) {
 		Watch task. Compiles templates/css, neuters application code, and begins
 		watching for changes.
 	*/
-	grunt.registerTask('default', ['emberTemplates', 'neuter', 'watch']);
+	grunt.registerTask('default', ['emberTemplates', 'neuter:build', 'watch']);
 };

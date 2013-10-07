@@ -103,6 +103,6 @@ Ember.BSModalRouteMixin = Ember.Mixin.create({
 	*/
 	deactivate: function () {
 		this._super();
-		this._clearOutlet('application', 'modal');
+		this._clearOutlet('application', 'bs-modal');
 	}
 });
