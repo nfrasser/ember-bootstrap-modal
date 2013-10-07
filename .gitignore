@@ -5,7 +5,6 @@ npm-debug.log
 
 build/*.js
 build/*.map
-dist/*.js
 
 .DS_Store
 .AppleDouble
