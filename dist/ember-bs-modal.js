@@ -153,7 +153,7 @@ Ember.BSModalRouteView = Ember.View.extend({
 
 		this.set('_isShown', false);
 		return Em.isNone(controller) ||
-			Em.typeOf(Ember.get(controller, 'back') !== 'function') ?
+			Em.typeOf(Ember.get(controller, 'back')) !== 'function' ?
 			history.back() : controller.back();
 	},
 
