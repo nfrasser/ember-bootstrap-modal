@@ -24,7 +24,7 @@ module.exports = function (grunt) {
 		neuter: {
 			// Neuter options
 			options: {
-				includeSourceMap: true
+				includeSourceMap: false
 			},
 
 			// Neutered Apps
@@ -36,11 +36,7 @@ module.exports = function (grunt) {
 			},
 			dist: {
 				files: {
-					'dist/ember-bs-modal.js': [
-						'build/templates.js',
-						'build/ember-bs-modal.js'
-					]
-
+					'dist/ember-bs-modal.js': 'build/ember-bs-modal.js'
 				}
 			}
 

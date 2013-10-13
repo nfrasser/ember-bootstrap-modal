@@ -1,7 +1,7 @@
 {
   "name": "ember-bootstrap-modal",
-  "version": "1.0.0",
-  "main": "Gruntfile.js",
+  "version": "1.0.6",
+  "main": "js/ember-bs-modal.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/nfrasser/ember-bootstrap-modal.git"

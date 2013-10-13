@@ -1,5 +1,7 @@
 (function() {
 
+(function() {
+
 Ember.TEMPLATES["bs-close"] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
 this.compilerInfo = [4,'>= 1.0.0'];
 helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
@@ -117,8 +119,6 @@ function program5(depth0,data) {
 });
 
 })();
-
-(function() {
 
 (function() {
 
@@ -358,6 +358,6 @@ Ember.BSModalRouteMixin = Ember.Mixin.create({
 });
 
 
-})();//@ sourceMappingURL=ember-bs-modal.js.map
+})();
 
-})();//@ sourceMappingURL=ember-bs-modal.js.map
+})();
